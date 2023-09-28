@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.start {
+  text-decoration: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  width: max-content;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color: #7193b7;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Prata', serif;
+  font-size: 50px;
+  color: white;
+}
+
+.fail h1 {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px; 
+  margin: 0;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px; 
+  text-align: center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.image-item {
+  overflow: hidden; 
+}
+
+.image-grid .image-item a img{
+  width: 400px;
+  height: 400px;
+}
+
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.puzzle-piece {
+  border: 2px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+
+#solve-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.flip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+.flip-box {
+  perspective: 1000px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.flip-box-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-align: center;
+}
+
+.flip-box-front {
+  color: white;
+  width: 250px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-box-back {
+  background-color: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 70px;
+}
+
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
